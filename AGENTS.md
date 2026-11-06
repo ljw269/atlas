@@ -10,16 +10,19 @@ The default setup uses the flat files below. A team that deliberately adopts a n
 
 ## If `references/voice.md` exists: consult before writing
 
+This writing system belongs to **Bolt.new** (brand slug `bolt`). Its references are `voice.md`, `terminology.md`, `style.md`, and `channels.md`. There is no `vocabulary.md` yet.
+
 1. Read `references/terminology.md` for banned and preferred terms — these are non-negotiable when marked `enforcement: must`, in the file's frontmatter or inline on a single rule (**must**).
 2. Read `references/voice.md` for tone, register, and calibrating examples.
-3. Read `references/vocabulary.md` (if present) to understand requests in the user's own words — it maps everyday phrases to the team's canonical terms.
-4. Read `references/channels.md` (if present) for the channel you're writing for.
-5. For ordinary drafting, read the active calibration pair with the most specific matching channel, audience, and purpose. Ignore superseded or withdrawn pairs. If none applies, report a coverage gap; if equally specific active pairs conflict and neither supersedes the other, stop and surface the conflict. A calibration pair never overrides a conflicting reference. During a calibration check, hold the target pair out entirely — its approved rewrite, rationale, and lesson are reviewer-only.
-6. Match the examples, not just the adjectives. When rules conflict, more specific beats more general; `must` beats `should`.
-7. If precedence doesn't settle a conflict, surface it to the user instead of picking silently — conflicts are bugs in the system, not choices for the agent.
-8. If the references don't cover something, say so and ask — never infer a rule that isn't written.
-9. References govern language, not facts. Never invent or infer product state, causes, dates, deadlines, guarantees, names, amounts, eligibility, or required actions. Ask for missing facts or omit them. Preserving a fact includes its strength: a consequence stated as certain stays certain, a possibility stays a possibility — "we will suspend" never becomes "we may pause."
-10. Never present output as "on brand" if you could not read the references.
+3. Read `references/style.md` for capitalization, punctuation, numbers, dates, time, and accessibility mechanics.
+4. Read `references/vocabulary.md` (if present) to understand requests in the user's own words — it maps everyday phrases to the team's canonical terms.
+5. Read `references/channels.md` (if present) for the channel you're writing for.
+6. For ordinary drafting, read the active calibration pair with the most specific matching channel, audience, and purpose. Ignore superseded or withdrawn pairs. If none applies, report a coverage gap; if equally specific active pairs conflict and neither supersedes the other, stop and surface the conflict. A calibration pair never overrides a conflicting reference. During a calibration check, hold the target pair out entirely — its approved rewrite, rationale, and lesson are reviewer-only.
+7. Match the examples, not just the adjectives. When rules conflict, more specific beats more general; `must` beats `should`.
+8. If precedence doesn't settle a conflict, surface it to the user instead of picking silently — conflicts are bugs in the system, not choices for the agent.
+9. If the references don't cover something, say so and ask — never infer a rule that isn't written.
+10. References govern language, not facts. Never invent or infer product state, causes, dates, deadlines, guarantees, names, amounts, eligibility, or required actions. Ask for missing facts or omit them. Preserving a fact includes its strength: a consequence stated as certain stays certain, a possibility stays a possibility — "we will suspend" never becomes "we may pause."
+11. Never present output as "on brand" if you could not read the references.
 
 ## Vocabulary and teach-back
 
