@@ -1,0 +1,18 @@
+{
+  "name": "scribble-slack-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "@scribble: reviews Bolt copy in Slack against the scribble writing system",
+  "type": "module",
+  "main": "index.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test --test-force-exit test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "@slack/bolt": "^5.1.0",
+    "dotenv": "^18.0.9"
+  }
+}

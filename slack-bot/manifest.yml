@@ -1,0 +1,26 @@
+display_information:
+  name: scribble
+  description: Reviews Bolt copy against the scribble writing system
+  background_color: "#1f1f1f"
+features:
+  bot_user:
+    display_name: scribble
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - channels:history
+      - groups:history
+      - chat:write
+      - files:read
+      - reactions:write
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+  interactivity:
+    is_enabled: false
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
