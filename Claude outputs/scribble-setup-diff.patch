@@ -1,0 +1,300 @@
+diff --git a/AGENTS.md b/AGENTS.md
+index f327c7a..1b95612 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -10,16 +10,19 @@ The default setup uses the flat files below. A team that deliberately adopts a n
+ 
+ ## If `references/voice.md` exists: consult before writing
+ 
++This writing system belongs to **Bolt.new** (brand slug `bolt`). Its references are `voice.md`, `terminology.md`, `style.md`, and `channels.md`. There is no `vocabulary.md` yet.
++
+ 1. Read `references/terminology.md` for banned and preferred terms — these are non-negotiable when marked `enforcement: must`, in the file's frontmatter or inline on a single rule (**must**).
+ 2. Read `references/voice.md` for tone, register, and calibrating examples.
+-3. Read `references/vocabulary.md` (if present) to understand requests in the user's own words — it maps everyday phrases to the team's canonical terms.
+-4. Read `references/channels.md` (if present) for the channel you're writing for.
+-5. For ordinary drafting, read the active calibration pair with the most specific matching channel, audience, and purpose. Ignore superseded or withdrawn pairs. If none applies, report a coverage gap; if equally specific active pairs conflict and neither supersedes the other, stop and surface the conflict. A calibration pair never overrides a conflicting reference. During a calibration check, hold the target pair out entirely — its approved rewrite, rationale, and lesson are reviewer-only.
+-6. Match the examples, not just the adjectives. When rules conflict, more specific beats more general; `must` beats `should`.
+-7. If precedence doesn't settle a conflict, surface it to the user instead of picking silently — conflicts are bugs in the system, not choices for the agent.
+-8. If the references don't cover something, say so and ask — never infer a rule that isn't written.
+-9. References govern language, not facts. Never invent or infer product state, causes, dates, deadlines, guarantees, names, amounts, eligibility, or required actions. Ask for missing facts or omit them. Preserving a fact includes its strength: a consequence stated as certain stays certain, a possibility stays a possibility — "we will suspend" never becomes "we may pause."
+-10. Never present output as "on brand" if you could not read the references.
++3. Read `references/style.md` for capitalization, punctuation, numbers, dates, time, and accessibility mechanics.
++4. Read `references/vocabulary.md` (if present) to understand requests in the user's own words — it maps everyday phrases to the team's canonical terms.
++5. Read `references/channels.md` (if present) for the channel you're writing for.
++6. For ordinary drafting, read the active calibration pair with the most specific matching channel, audience, and purpose. Ignore superseded or withdrawn pairs. If none applies, report a coverage gap; if equally specific active pairs conflict and neither supersedes the other, stop and surface the conflict. A calibration pair never overrides a conflicting reference. During a calibration check, hold the target pair out entirely — its approved rewrite, rationale, and lesson are reviewer-only.
++7. Match the examples, not just the adjectives. When rules conflict, more specific beats more general; `must` beats `should`.
++8. If precedence doesn't settle a conflict, surface it to the user instead of picking silently — conflicts are bugs in the system, not choices for the agent.
++9. If the references don't cover something, say so and ask — never infer a rule that isn't written.
++10. References govern language, not facts. Never invent or infer product state, causes, dates, deadlines, guarantees, names, amounts, eligibility, or required actions. Ask for missing facts or omit them. Preserving a fact includes its strength: a consequence stated as certain stays certain, a possibility stays a possibility — "we will suspend" never becomes "we may pause."
++11. Never present output as "on brand" if you could not read the references.
+ 
+ ## Vocabulary and teach-back
+ 
+diff --git areferences/voice.md b/references/voice.md
+new file mode 100644
+index 0000000..4d01690
+--- /dev/null
++++ b/references/voice.md
+@@ -0,0 +1,64 @@
++---
++title: "Voice"
++brand: "bolt"
++domain: "shared"
++enforcement: "should"
++---
++
++# How Bolt sounds
++
++**Who we write for:** business operators, meaning founders and small-business owners building software to start, run, and grow their business without writing code. After them: PMs and product designers, marketers, and agencies building for all of them. Write for someone smart and busy, not for an engineer.
++
++## Personality
++
++- **Empowering:** the reader's idea comes first, not our technology. Bolt is a tool in their hands, not the main character.
++- **Confident:** we know the product is good, so we don't oversell. No superlatives, no hype.
++- **Direct:** respect people's time. Lead with the action or outcome and cut the rest.
++- **Warm:** friendly without performing. Calm when something breaks, brief when something works.
++- **Inclusive:** assume no technical background. Plain words that translate well.
++
++**We are not:** hype-driven or startup-bro ("10x your workflow!"), condescending or overly didactic, robotic or corporate ("Please be advised that…"), or cute at the expense of clarity.
++
++## Core rules
++
++1. **Say only what the reader needs to decide.** Don't explain options they haven't picked or scenarios that don't apply to them.
++2. **Always use plain language, never engineering words.** Not "deploy," "enforce," "per-project," "user-specified," or "external users." Describe what actually happens in words a business owner would use. (**must**)
++3. **Prefer positive phrasing.** Say what people can do, unless the restriction is the point.
++4. **Explain consequences as "If you [action], this will [result]."** Use it at the start of a flow, in confirmations, and before any action that changes something. Toggle descriptions are the exception (see `channels.md`).
++5. **Write like a person talks.** Active voice, contractions, short sentences, roughly a 7th-grade reading level. Front-load the most important word.
++6. **One thought per message.** Put extra context in helper text or the next step.
++7. **Use the fewest words that keep the meaning.** If a label and its control already make something clear, drop the helper text. Don't restate the label.
++
++## Who's speaking
++
++- Address the reader as **"you."**
++- **"We"** means Bolt the company. Use it only when the company is acting (status updates, policy, support, marketing), never in product UI.
++- **The agent says "I" in chat.** It never calls itself "Bolt" or "we." In discussion mode it frames changes as recommendations ("You could add…"), not promises ("I'll add…"). Nothing outside chat uses first person.
++
++## Tone by context
++
++| Context | Tone | Example |
++|---|---|---|
++| Onboarding | Encouraging, light | "Your site is live. Share it with the world." |
++| Error | Calm, specific, actionable | "Couldn't publish your site. Try again." |
++| Destructive action | Serious, clear | "If you delete this project, this will permanently remove it. This can't be undone." |
++| Empty state | Motivating, never guilt-tripping | "No projects yet" + [Create project] |
++| Success | Celebratory but brief | "Your site is live" |
++| Settings | Neutral, informative | "Plays a chime when Bolt finishes responding" |
++
++## Calibrating examples
++
++**We hate this** (team settings screen, 2026):
++
++> When activated, members of this team workspace will not be able to use their personal workspace, nor create other teams.
++
++*Why: "When activated" narrates the toggle, the future-tense negative stacks restrictions, "nor" is stiff, and "team workspace" and "personal workspace" break the one-word-per-concept rule (say "team" and "personal account").*
++
++> Enforce the deploy provider for all projects in this team. "User specified" keeps per-project control.
++
++*Why: "enforce" and "deploy" are engineering words, the label doesn't match the setting (it controls the database provider), and it explains an option the reader didn't pick.*
++
++
++---
++
++*Draft from chalkline setup, 2026-11-06. Sources: interview, Figma "Copywriting" frame, team settings screenshot, Bolt ICP page, bolt repo prompts. Approval pending.*
+diff --git areferences/terminology.md b/references/terminology.md
+new file mode 100644
+index 0000000..9d4a7f8
+--- /dev/null
++++ b/references/terminology.md
+@@ -0,0 +1,59 @@
++---
++title: "Terminology"
++brand: "bolt"
++domain: "shared"
++enforcement: "should"
++---
++
++# Bolt terminology
++
++Rules marked (**must**) are non-negotiable. Everything else is the default (should).
++
++## Use this
++
++| Term | Casing | Context |
++|---|---|---|
++| Bolt.new, then Bolt | as shown | "Bolt.new" on first mention in a piece, "Bolt" after that |
++| project | lowercase | What someone builds, in product UI ("Create project") |
++| site | lowercase | What someone builds, when the subject is publishing, domains, or visibility ("Published site visibility") |
++| apps and websites | lowercase | What people build, in marketing and onboarding |
++| agent | lowercase | The AI in Bolt. In chat it says "I" |
++| publish | lowercase | Putting a site or project live. Never "deploy" |
++| token | lowercase | The unit of usage |
++| refill | lowercase | Never "Refill" |
++| team | lowercase | The shared space members belong to |
++| personal account | lowercase | Someone's own space outside any team |
++| sign in, sign up | sentence case in UI | Authentication |
++| turn on, turn off | keep verb and "on/off" together | Settings: "turn on notifications," not "turn notifications on" |
++| select, choose | lowercase | Navigation. "Select" for interface elements, "choose" for decisions. "Tap" only in mobile-specific steps |
++| text message | lowercase | "Text" when space is tight |
++
++In chat, the agent names what the person is building in their own terms ("I added a contact form to your site").
++
++## Never this
++
++| Don't say | Say instead | Enforcement |
++|---|---|---|
++| deploy | publish | (**must**) |
++| credit | token | should |
++| workspace, organization (for the shared space) | team, or personal account | should |
++| model, LLM, AI engine | agent | should |
++| log in, register | sign in, sign up | should |
++| enable, disable, activate, deactivate | turn on, turn off | should |
++| external users | people outside your team | should |
++| enforce, per-project, user-specified | plain words for what happens | should |
++| SMS | text message | should |
++| click here, learn more | link text that names where it goes | should |
++| blacklist, whitelist, master | blocklist, allowlist, main | should |
++
++## Exact wording
++
++Text in this section is reproduced byte-for-byte, never paraphrased or reformatted (see AGENTS.md).
++
++> \*Plus tax
++
++**Scope:** every price Bolt shows, in every channel and locale (pricing page, upgrade screens, emails, ads). Put an asterisk directly after the price ("$25/month\*") and place the note below it, starting with the asterisk. **Owner and source:** this repository is the official source. No separate legal owner has been named; changes need approval from this repository's approver. Shared wording never overrides local tax or consumer-law requirements. If a market requires different wording (for example, prices that must include VAT), stop and ask.
++
++---
++
++*Draft from chalkline setup, 2026-11-06. Sources: interview, Figma "Copywriting" frame, content standards doc (general rules), bolt repo prompts. Approval pending.*
+diff --git areferences/style.md b/references/style.md
+new file mode 100644
+index 0000000..633b0aa
+--- /dev/null
++++ b/references/style.md
+@@ -0,0 +1,64 @@
++---
++title: "Style and mechanics"
++brand: "bolt"
++domain: "shared"
++enforcement: "should"
++---
++
++# Style and mechanics
++
++Applies everywhere unless `channels.md` says otherwise. For anything not covered here, follow AP style.
++
++## Capitalization and headings
++
++- Sentence case for everything: titles, headings, buttons, navigation, tabs, column headers, tooltips, messages. Capitalize only the first word, proper nouns, acronyms, and branded names.
++- No ALL CAPS for emphasis. Use bold, sparingly.
++- Headings: informative, one sentence, no period. "Recent history," not "Here is your recent history."
++- Acronyms: all letters capitalized. Spell out on first use in body text unless the acronym is better known than the full name.
++- Job titles: capitalize next to a name ("Product Manager Kamal Singh"), lowercase otherwise.
++
++## Punctuation
++
++- **Oxford comma** in sentences with three or more items. No commas at the end of bullets.
++- **Periods:** none on single-sentence UI strings (buttons, labels, headings, toasts). Use them when there are two or more sentences.
++- **Exclamation points:** never in errors or alerts. At most one per screen or piece (see `channels.md`).
++- **Em dashes (—):** no spaces, one or two per page at most. **En dashes (–)** for ranges, no spaces: "4–5%," "10–11 AM ET."
++- **Ellipsis (…):** the single character, only for truncation or loading ("Loading…"). Never for trailing off.
++- **Quotes and apostrophes:** curly (“ ” ’), not straight. Commas and periods go inside quotes. Don't use quotes for emphasis.
++- **Avoid:** ampersands (except in proper names), "+" for "and," slashes ("on or off," not "on/off"), and semicolons except to separate list items that contain commas.
++- **Question marks** only for real questions. "Reset password," not "Reset password?"
++
++## Lists
++
++- Introduce with a colon, except under a heading or before radio buttons and checkboxes.
++- Capitalize the first word. No end periods unless an item has multiple sentences.
++- Bullets for groups, numbered lists for steps.
++
++## Numbers, money, dates, and time
++
++- Numerals for all numbers ("5 projects"), with commas from 1,000. Use "20,000+" for open-ended counts.
++- Abbreviate large numbers with K and M ("1.2M tokens") only where space is tight. Write them in full in prose.
++- Percent: "4%," "4–5%," with no space before the symbol. Multipliers: "20x."
++- Negative numbers use the minus sign: "–$0.23."
++- Currency: symbol before the amount, no ".00" on whole amounts ("$25"). Show a currency code after the amount when it's needed ("$25,000 USD"). Every price carries the "\*Plus tax" note (see `terminology.md`).
++- Dates: no numeric dates (not "02/13/26") and no ordinals ("December 5," not "December 5th"). Add the year only when it's needed. Ranges: "November 5–6," "Nov 5–Dec 11."
++- Time: "10 AM ET." No ":00" on the hour, AM/PM in caps without periods, two-letter time zones (ET, PT). Put the date first: "March 26 at 4 PM ET." Use ET for broad audiences and the person's own time zone for their own actions.
++- Relative time: "1m," "2h," "Mon," "2w," then the date ("Dec 20").
++- Units: "5 TB," "20 GB," "100 x 100 px."
++
++## Accessibility and inclusive language
++
++- No directional or visual instructions ("the green button," "above," "below"). Say "previous," "following," or link to the spot.
++- Link text names the destination. Never "click here" or "learn more."
++- Bold the names of UI elements in instructions ("Go to **Settings**"). Use quotes where bold isn't available. Don't add "tab" to section names.
++- Navigation paths use → with no ">" ("**Settings** → **Team**").
++- Alt text describes what matters, stays under 125 characters, and never starts with "Image of." Decorative images get an empty alt.
++- Form fields need real labels, not placeholder text.
++- Emoji never carry meaning. Keep them out of product UI.
++- Use gender-neutral language ("they," "people"). Use person-first language ("people with dyslexia"). Avoid stereotypes and unneeded qualifiers. Example names should reflect a range of backgrounds.
++- Write for translation: no idioms or culture-specific jokes, and leave about 35% extra room for longer translated text.
++- Use full country names ("United Kingdom"). "US" without periods is fine where space is tight.
++
++---
++
++*Draft from chalkline setup, 2026-11-06. Sources: content standards doc (general rules, fintech-specific rules removed), Figma "Copywriting" frame, interview decisions. Approval pending.*
+diff --git areferences/channels.md b/references/channels.md
+new file mode 100644
+index 0000000..de94ecf
+--- /dev/null
++++ b/references/channels.md
+@@ -0,0 +1,57 @@
++---
++title: "Channels"
++brand: "bolt"
++domain: "shared"
++enforcement: "should"
++---
++
++# Channel rules
++
++Each section lists only what differs from `voice.md` and `style.md` for that channel.
++
++## Product UI
++
++- **No exclamation points.** No "we." Nothing in first person.
++- **Buttons:** start with a verb, use 1–3 words, no articles, no end punctuation, and be specific. "Save changes," not "Submit." "Add member," not "Add a member." "Upgrade plan," not "Click here to upgrade."
++- **Destructive actions:** the button names the action ("Delete project"). The confirmation uses "If you [action], this will [result]" and ends with "This can't be undone." The confirm button repeats the action ("Yes, delete project").
++- **Errors:** say what happened, then what to do next, in plain words. Be specific ("Name must be 50 characters or fewer"). Don't blame the reader. Use one "sorry" only for a real failure, never for validation. No raw error codes.
++- **Empty states:** a short headline plus a call to action. "No projects yet" + [Create project].
++- **Toggles and settings:** describe what the setting does, in present tense. "Plays a chime when Bolt finishes responding." Never start with "When enabled," "When activated," or "If turned on."
++- **Formats:** "$25/month," and dates like "Feb 13, 2026."
++
++## Chat (the agent)
++
++- The agent says "I" and calls the person "you."
++- When it summarizes work, it says what changed in everyday words: "I added an audio player to your landing page."
++- If something failed or isn't finished, it says so plainly and suggests the next step. It never pastes raw error output.
++- In discussion mode, it gives recommendations ("You could add…"), not promises ("I'll add…").
++
++## Marketing (blog, social, email campaigns, ads, landing pages)
++
++- "We" is fine when Bolt the company is acting.
++- Exclamation points are allowed sparingly: one per piece at most, and never as a substitute for strong wording.
++- Website heroes and some creative assets may use title case. Everything else uses sentence case.
++- Use US spelling, except UK spelling for English copy aimed at regions outside the US.
++- Prices in prose: "$25 a month."
++- Credit statistics and quotes to the original source. Long-form assets (ebooks, guides) get a bibliography in Chicago style.
++- **Cut patterns that sound AI-written:**
++  - filler phrases that could appear in any article
++  - "This isn't X. It's Y." setups (state Y directly)
++  - fragments used as punchlines
++  - "What if I told you…" setups
++  - inanimate things doing human actions (name the person)
++  - "People tend to…" (say "you")
++  - lists of three by default (pairs are usually enough)
++  - lines that sound like a motivational poster
++  - adverbs propping up weak verbs
++- Read it aloud. If a sentence sounds rehearsed, rewrite it.
++
++## Customer communications (transactional email, push, in-app messages)
++
++- Emoji: rarely, never carrying the message, and placed at the end of a subject line or push header, or after the first sentence of a message.
++- Use quotes for UI names where bold isn't available: Tap "Upgrade plan."
++- Use the person's own time zone for their own actions.
++
++---
++
++*Draft from chalkline setup, 2026-11-06. Sources: Figma "Copywriting" frame (product UI), coworker's Bolt style SKILL.md (marketing), content standards doc (customer comms), bolt repo prompts and draft agent prompt (chat), interview decisions. Approval pending.*
