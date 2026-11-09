@@ -1,4 +1,4 @@
-# chalkline
+# Atlas (based on Block's Chalkline)
 
 **A writing system your team owns and your agents can consult.**
 
