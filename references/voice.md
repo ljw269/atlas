@@ -21,29 +21,39 @@ enforcement: "should"
 
 ## Core rules
 
-1. **Say only what the reader needs to decide.** Don't explain options they haven't picked or scenarios that don't apply to them.
+1. **State only what's relevant to the reader at that exact moment in their journey.** Don't explain options they haven't picked, scenarios that don't apply to them, or steps that come later.
 2. **Always use plain language, never engineering words.** Not "deploy," "enforce," "per-project," "user-specified," or "external users." Describe what actually happens in words a business owner would use. (**must**)
 3. **Prefer positive phrasing.** Say what people can do, unless the restriction is the point.
 4. **Explain consequences as "If you [action], this will [result]."** Use it at the start of a flow, in confirmations, and before any action that changes something. Toggle descriptions are the exception (see `channels.md`).
 5. **Write like a person talks.** Active voice, contractions, short sentences, roughly a 7th-grade reading level. Front-load the most important word.
 6. **One thought per message.** Put extra context in helper text or the next step.
-7. **Use the fewest words that keep the meaning.** If a label and its control already make something clear, drop the helper text. Don't restate the label.
-8. **Set expectations before someone starts something new.** The first time someone enters a feature or flow, tell them what happens if they continue: what they get, what it costs or uses, and where they can change it later. Lead with the benefit, ask the real question in the headline, and make the buttons answer it.
-9. **In errors, lead with what's blocked.** First say what can't happen, then why, then what to do next.
+7. **Use the fewest words that keep the meaning.** Every extra word adds cognitive load. Edit AI-generated copy ruthlessly, especially in UI. If a label and its control already make something clear, drop the helper text. Don't restate the label.
+8. **Set accurate expectations.** People should always know what will happen when they select the next button. Make the next step clear before they select it, cover only what's relevant to the current step, and don't front-load the flow: put each detail on the screen where someone needs it. Before someone commits to something new, say what they get, what it costs or uses, and where they can change it later.
+9. **In errors, always offer a clear pathway to resolution.** Every error ends with what to do next: a fix, a retry, or where to get help. Lead with what's blocked, then why, then what to do next.
+10. **Say it directly, without metaphors or idioms.** Many readers use Bolt in their second or third language, and figurative phrases don't translate. ("Your site is ready to publish," not "ready to take off.")
+11. **Make the user the subject, not Bolt.** Name what people are building in their own terms. ("You can now take payments on your site," not "Bolt has enabled payment processing.")
 
 ## Who's speaking
 
 - Address the reader as **"you."**
-- **"We"** means Bolt the company. Use it only when the company is acting (status updates, policy, support, marketing), never in product UI.
-- **The agent says "I" in chat.** It never calls itself "Bolt" or "we." In discussion mode it frames changes as recommendations ("You could add…"), not promises ("I'll add…"). Nothing outside chat uses first person.
+- **"We"** always means Bolt the company. Use it anywhere, including product UI, when the company is speaking or acting ("We're fixing an issue with publishing. Try again in a few minutes.").
+- **The agent says "I" in chat.** Only the agent says "I." It never calls itself "Bolt" or "we." In discussion mode it frames changes as recommendations ("You could add…"), not promises ("I'll add…").
+
+## Politeness markers
+
+Use them sparingly. Too many add length and sound insincere.
+
+- **Please:** Avoid. Start with what you're asking for ("Verify your email to continue").
+- **Sorry:** Avoid. We don't always know whether Bolt or the user caused an issue, and we don't take blame preemptively. Point people to Bolt Support instead of apologizing.
+- **Thank you:** Sparingly, when someone has done something for us, like sharing feedback.
 
 ## Tone by context
 
 | Context | Tone | Example |
 |---|---|---|
-| Onboarding | Encouraging, light | "Your site is live. Share it with the world." |
-| Error | Calm, specific, actionable | "Couldn't publish your site. Try again." |
-| Destructive action | Serious, clear | "If you delete this project, this will permanently remove it. This can't be undone." |
+| Onboarding | Encouraging, light | "Describe your idea to start building" |
+| Error | Calm, specific, actionable | "Couldn't connect to GitHub. Sign in to GitHub again to continue." |
+| Destructive action | Serious, clear | "If you continue, this project will be permanently deleted. This can't be undone." |
 | Empty state | Motivating, never guilt-tripping | "No projects yet" + [Create project] |
 | Success | Celebratory but brief | "Your site is live" |
 | Settings | Neutral, informative | "Plays a chime when Bolt finishes responding" |
@@ -64,3 +74,5 @@ enforcement: "should"
 ---
 
 *Generated by chalkline setup on 2026-11-06 from: interview + Figma "Copywriting" frame + team settings screenshot + Bolt ICP page + bolt repo prompts (all rules shown to and approved by the participant). Approved by Lillian, setup participant, for the scribble repository (Bolt.new writing system) on 2026-11-06 in a Claude setup session; this footer records participation, not organizational, legal, accessibility, or localization authority.*
+
+*Revised on 2026-11-11 to match the Notion page "Bolt content standards" (product UI and agent chat), approved by Lillian. This footer records participation, not organizational, legal, accessibility, or localization authority.*
