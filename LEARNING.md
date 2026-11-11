@@ -71,7 +71,7 @@ These are diagnostic questions, not a compliance score. Predeclare what counts a
 - Do not promote frequently used words, accepted drafts, reactions, or model outputs into guidance automatically.
 - Do not infer team policy from one person's edit or approval of one artifact.
 - Do not rank, score, profile, or make employment decisions about individual writers.
-- Agents include a task-level traceability and confidence receipt by default; that does not require people to submit or retain learning or usage reports. Reports are purpose-limited and writer-controlled by default; do not aggregate them, join them to identity or performance systems, or retain task identifiers when a synthetic reproduction will do. Confidence scores assess the evidence for one task, never the writer, and never automatically promote output into policy.
+- Agents are not required to include a task-level traceability and confidence receipt by default; that does not require people to submit or retain learning or usage reports. Reports are purpose-limited and writer-controlled by default; do not aggregate them, join them to identity or performance systems, or retain task identifiers when a synthetic reproduction will do. When used, confidence scores assess the evidence for one task, never the writer, and never automatically promote output into policy.
 - Do not copy private usage reports or work artifacts into a public Chalkline repository. A technically public-safe report may still identify a person or confidential event through rare context; check for re-identification before publishing.
 - Do not let a language system approve its own changes or bump its own consumers.
 - Do not treat lack of reported gaps as proof that coverage is complete.

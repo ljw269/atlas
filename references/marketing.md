@@ -7,6 +7,8 @@ enforcement: "should"
 
 # Marketing writing
 
+> **Outside Notion product standards.** The Notion page "Bolt content standards" covers product UI and agent chat only. This file is Lillian-approved provisional marketing guidance — use it for marketing tasks, not when reviewing product UI or agent chat against the Notion-aligned rules.
+
 Applies to all marketing writing: landing pages, plan comparisons, campaigns, ads, email campaigns, social, and blog. These are general principles, not rules for one page. The pricing and homepage examples show the pattern (see calibration pairs 004 and 005).
 
 `voice.md`, `terminology.md`, and `style.md` still apply. Marketing mechanics ("we," exclamation points, title case, spelling, prices, AI-sounding patterns) are in `channels.md` under Marketing.
@@ -61,3 +63,5 @@ Applies to all marketing writing: landing pages, plan comparisons, campaigns, ad
 ---
 
 *Drafted on 2026-11-09 from Lillian's approved marketing examples: pricing thread (2026-11-02) and homepage thread with Figma content pass (2026-10-23 to 2026-10-30). Approved by Lillian as a reference on 2026-11-09. This footer records participation, not organizational, legal, accessibility, or localization authority.*
+
+*Revised on 2026-11-11 to label this file as outside the Notion product standards (provisional marketing mode). Approved by Lillian via Atlas sync task.*

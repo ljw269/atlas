@@ -8,7 +8,7 @@ A thin caller collects task context, invokes a reviewed local workflow, and pres
 
 Useful context includes the requested task, supplied facts, draft, channel, audience, purpose, and locale. Defaults are hints, not proof of applicability. Ask when missing context changes which guidance applies.
 
-Every drafting or review response includes the default [traceability and confidence receipt](traceability.md), separate from customer-facing copy. Callers must carry the dimension scores, evidence-linked reasons, overall score, gaps, blockers, and required review without upgrading or suppressing them. A score is a task-level evidence assessment, not a probability or authorization. Unknown coverage cannot become a successful review.
+A [traceability and confidence receipt](traceability.md) is optional, not required on every drafting or review response. When a caller requests one, keep it separate from customer-facing copy and carry the dimension scores, evidence-linked reasons, overall score, gaps, blockers, and required review without upgrading or suppressing them. A score is a task-level evidence assessment, not a probability or authorization. Unknown coverage cannot become a successful review.
 
 The caller must preserve:
 
