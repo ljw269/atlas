@@ -1,6 +1,6 @@
 # Traceability and task confidence
 
-Every drafting or review task using Chalkline must include a compact usage receipt, even when blocked. Put it after or alongside the deliverable, clearly separated from copy. A chat block is enough: no additional setup interview, compulsory per-task file, telemetry service, or new reference metadata is required.
+A compact usage receipt is **optional**. Ordinary drafting and review in this repo do not require one (keep replies short). When an integration or audit chooses to include a receipt — including for blocked work — put it after or alongside the deliverable, clearly separated from copy. A chat block is enough: no additional setup interview, compulsory per-task file, telemetry service, or new reference metadata is required.
 
 The receipt is a self-report of consultation and checks, not independent attestation, proof of compliance, or evidence that an agent obeyed instructions. Its confidence score describes support for this task—not model probability, writing quality, a writer's ability, or permission to publish. No percentages or personal telemetry. Do not record or score anyone's vocabulary habits.
 

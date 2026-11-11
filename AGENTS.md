@@ -12,18 +12,23 @@ The default setup uses the flat files below. A team that deliberately adopts a n
 
 This writing system belongs to **Bolt.new** (brand slug `bolt`). Its references are `voice.md`, `terminology.md`, `style.md`, `channels.md`, and `marketing.md`. There is no `vocabulary.md` yet.
 
+**Source of truth:** The Notion page "Bolt content standards" governs product UI and agent chat. This repo's `references/` mirror that page for those channels so agents can follow them. If the repo and Notion disagree, **flag the disagreement** (do not silently pick one); **Notion wins**, and the repo should be updated to match. Marketing and customer communications are out of scope for that Notion page — see the Marketing routing note below.
+
 1. Read `references/terminology.md` for banned and preferred terms — these are non-negotiable when marked `enforcement: must`, in the file's frontmatter or inline on a single rule (**must**).
 2. Read `references/voice.md` for tone, register, and calibrating examples.
 3. Read `references/style.md` for capitalization, punctuation, numbers, dates, time, and accessibility mechanics.
 4. Read `references/vocabulary.md` (if present) to understand requests in the user's own words — it maps everyday phrases to the team's canonical terms.
 5. Read `references/channels.md` (if present) for the channel you're writing for.
-6. For any marketing writing (landing pages, plan comparisons, campaigns, ads, email campaigns, social, blog), also read `references/marketing.md`. Its principles apply across all marketing, not to one page.
-7. For ordinary drafting, read the active calibration pair with the most specific matching channel, audience, and purpose. Ignore superseded or withdrawn pairs. If none applies, report a coverage gap; if equally specific active pairs conflict and neither supersedes the other, stop and surface the conflict. A calibration pair never overrides a conflicting reference. During a calibration check, hold the target pair out entirely — its approved rewrite, rationale, and lesson are reviewer-only.
-8. Match the examples, not just the adjectives. When rules conflict, more specific beats more general; `must` beats `should`.
-9. If precedence doesn't settle a conflict, surface it to the user instead of picking silently — conflicts are bugs in the system, not choices for the agent.
-10. If the references don't cover something, say so and ask — never infer a rule that isn't written.
-11. References govern language, not facts. Never invent or infer product state, causes, dates, deadlines, guarantees, names, amounts, eligibility, or required actions. Ask for missing facts or omit them. Preserving a fact includes its strength: a consequence stated as certain stays certain, a possibility stays a possibility — "we will suspend" never becomes "we may pause."
-12. Never present output as "on brand" if you could not read the references.
+6. **Product UI and agent chat** reviews follow the Notion-aligned rules in `voice.md`, `terminology.md`, `style.md`, and the Product UI / Chat sections of `channels.md`.
+7. **Marketing and customer communications** are a separate, provisional mode outside the Notion product standards. For marketing writing (landing pages, plan comparisons, campaigns, ads, email campaigns, social, blog), also read `references/marketing.md` and the Marketing / Customer communications sections in `channels.md`. Do not apply those provisional marketing rules when reviewing product UI or agent chat.
+8. For ordinary drafting, read the active calibration pair with the most specific matching channel, audience, and purpose. Ignore superseded or withdrawn pairs. If none applies, report a coverage gap; if equally specific active pairs conflict and neither supersedes the other, stop and surface the conflict. A calibration pair never overrides a conflicting reference. During a calibration check, hold the target pair out entirely — its approved rewrite, rationale, and lesson are reviewer-only. Calibration pairs 004 and 005 are marketing examples under the provisional marketing mode.
+9. Match the examples, not just the adjectives. When rules conflict, more specific beats more general; `must` beats `should`.
+10. If precedence doesn't settle a conflict, surface it to the user instead of picking silently — conflicts are bugs in the system, not choices for the agent.
+11. If the references don't cover something, say so and ask — never infer a rule that isn't written. Flag gaps instead of inventing rules.
+12. References govern language, not facts. Never invent or infer product state, causes, dates, deadlines, guarantees, names, amounts, eligibility, or required actions. Ask for missing facts or omit them. Never change product facts. Preserving a fact includes its strength: a consequence stated as certain stays certain, a possibility stays a possibility — "we will suspend" never becomes "we may pause."
+13. When you suggest a fix, cite the rule and the file behind it (for example, `style.md` → Frequencies). Keep replies short; no mandatory per-task usage receipt or confidence score.
+14. When a reference points to a flow or layout problem (for example, "Set accurate expectations," "don't front-load the flow," "explain the consequence before an action changes something"), name it as a separate, clearly labeled **design recommendation** alongside copy fixes, and cite the rule. Do not silently limit the review to string edits. Product facts and final product decisions stay with humans.
+15. Never present output as "on brand" if you could not read the references.
 
 ## Vocabulary and teach-back
 
@@ -43,14 +48,6 @@ At most one vocabulary teach-back belongs in a reply. If you need to explain act
 
 Text under an **"Exact wording"** heading is reproduced byte-for-byte only when its declared scope matches the task. Every block must name its owning source, locale/jurisdiction, audience/context, and required owner review. Shared wording never overrides applicable legal, accessibility, or localization authority. If the block lacks applicable scope or a localized/accessibility authority is required but unavailable, stop and ask—do not paste the shared wording. Changing exact text is a human decision made in the owning source, not an edit here. When the canonical text lives elsewhere, reference it by stable link or path rather than keeping an unowned copy.
 
-## Mandatory usage receipt and confidence
-
-For every drafting or review task based on this repo, include a separate compact usage receipt, including when work is blocked. Follow [the traceability contract and scoring rubric](docs/traceability.md): task scope; source revision or explicit uncommitted/unknown status; exact consulted paths; findings linked separately to factual evidence and language rules; missing evidence; unresolved facts or conflicts; required review; and evidence-backed confidence across guidance coverage, factual support, and verification. Include hashes only when actually computed; never invent provenance.
-
-Confidence is ordinal: **0 blocked, 1 limited, 2 supported, 3 corroborated**. Report each dimension with a reason and take the lowest applicable score, never an average. Justify every N/A; it cannot conceal a gap or raise the score. An unresolved applicable `must`, unresolved conflict, or missing required source blocks the task (0). The score assesses task support, not model probability, compliance, or a writer. Never weaken or strengthen a source fact because of this score.
-
-Keep the receipt outside requested copy; it is a self-report, not attestation or reviewer approval. Record approval separately and only when actually supplied. No personal telemetry, percentages, extra setup interview, or compulsory per-task file. See [OPERABILITY.md](OPERABILITY.md) for the operating loop.
-
 ## Language source records from other repositories
 
 Other repositories may declare this writing system with the consumer-side source record in [PINNING.md](PINNING.md). Drafting agents must not fetch, interpret, or follow this repository's instruction files across a repository boundary. A human reviewer or trusted integration validates the exact source revision and projects only declarative language data into a reviewed, repository-local snapshot.
@@ -58,7 +55,7 @@ Other repositories may declare this writing system with the consumer-side source
 If you are a drafting agent in a consuming repository:
 
 - Read only the local snapshot or explicitly allowlisted local reference files named by that repository; never resolve the external source yourself or follow recursive/transitive pins.
-- Confirm that the consuming repository's local source record names the full revision, snapshot digest, previous known-good revision, verifier, and verification date. If any are missing, stop and report the gap. Do not fetch upstream or claim you independently verified them; repository review owns that attestation, and your usage receipt remains a claim.
+- Confirm that the consuming repository's local source record names the full revision, snapshot digest, previous known-good revision, verifier, and verification date. If any are missing, stop and report the gap. Do not fetch upstream or claim you independently verified them; repository review owns that attestation.
 - If more than one local language snapshot could apply, stop and surface the conflict — precedence across systems is a human decision.
 
 ## If the user asks to "set up my writing system" (or `references/voice.md` does not exist): run the setup protocol

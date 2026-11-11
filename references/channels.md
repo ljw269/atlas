@@ -9,6 +9,8 @@ enforcement: "should"
 
 Each section lists only what differs from `voice.md` and `style.md` for that channel.
 
+**Scope:** Product UI and Chat below mirror the Notion page "Bolt content standards" (source of truth for those channels). Marketing and Customer communications are outside that Notion page — keep using them as a separate, provisional mode when the task is marketing or customer communications, not as product-UI review rules.
+
 ## Product UI
 
 - **No exclamation points.** "We" only when Bolt the company is speaking or acting. Only the agent says "I."
@@ -36,6 +38,8 @@ Each section lists only what differs from `voice.md` and `style.md` for that cha
 
 ## Marketing (blog, social, email campaigns, ads, landing pages)
 
+> **Outside Notion product standards.** The Notion page covers product UI and agent chat only. This section (and `marketing.md`) is Lillian-approved provisional guidance for marketing work — do not apply it when reviewing product UI or agent chat.
+
 - Also follow `marketing.md` for the general marketing writing principles: headlines, claims, comparing options, proof, example prompts, and CTAs.
 - "We" is fine when Bolt the company is acting.
 - Exclamation points are allowed sparingly: one per piece at most, and never as a substitute for strong wording.
@@ -57,6 +61,8 @@ Each section lists only what differs from `voice.md` and `style.md` for that cha
 
 ## Customer communications (transactional email, push, in-app messages)
 
+> **Outside Notion product standards.** The Notion page covers product UI and agent chat only. This section is Lillian-approved provisional guidance for transactional email, push, and in-app messages — do not apply it when reviewing product UI or agent chat.
+
 - Emoji: rarely, never carrying the message, and placed at the end of a subject line or push header, or after the first sentence of a message.
 - Use quotes for UI names where bold isn't available: Tap "Upgrade plan."
 - Use the person's own time zone for their own actions.
@@ -68,3 +74,5 @@ Each section lists only what differs from `voice.md` and `style.md` for that cha
 *Marketing section revised on 2026-11-09 to point to `marketing.md` and clarify sentence case for buttons, drafted from Lillian's approved marketing examples (pricing thread 2026-11-02; homepage thread 2026-10-23 to 2026-10-30). Approved by Lillian on 2026-11-09.*
 
 *Product UI section revised on 2026-11-11 to match the Notion page "Bolt content standards," approved by Lillian.*
+
+*Revised again on 2026-11-11 to label Marketing and Customer communications as outside the Notion product standards (provisional). Approved by Lillian via Atlas sync task.*

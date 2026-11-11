@@ -21,17 +21,17 @@ Set up -> consult -> surface gaps or conflicts -> draft or stop -> review and de
 
 See [Learning without self-governance](LEARNING.md) for turning observations into reviewed changes, calibrated checks, and deliberate pin updates — never automatic policy.
 
-## Mandatory usage receipt
+## Optional usage receipt
 
-Every drafting or review task includes a compact receipt separate from the copy, even when blocked. [Traceability](docs/traceability.md) defines the required fields, canonical confidence rubric, and a short template. This replaces the optional usage report: it adds no setup question and requires no new per-task file or service.
+Per-task usage receipts and confidence scores are **not required** for ordinary drafting or review in this repo (keep replies short: cite the rule and file, flag gaps, never change product facts). [Traceability](docs/traceability.md) still defines an optional receipt format and rubric for integrations or audits that choose to use one. No setup question and no compulsory per-task file.
 
-The receipt names task scope, consulted sources and their known revision state, evidence-linked findings, missing evidence, unresolved facts or conflicts, required review, and confidence. Distinguish factual evidence from language guidance; a rule can govern phrasing without proving a product claim. Exact consulted paths are required; hashes are optional and reported only when actually computed. Unknown provenance stays unknown.
+When a receipt is produced, it names task scope, consulted sources and their known revision state, evidence-linked findings, missing evidence, unresolved facts or conflicts, required review, and confidence. Distinguish factual evidence from language guidance; a rule can govern phrasing without proving a product claim. Exact consulted paths are required; hashes are optional and reported only when actually computed. Unknown provenance stays unknown.
 
 Confidence is an evidence-backed task assessment: **0 blocked, 1 limited, 2 supported, 3 corroborated**. Score guidance coverage, factual support, and verification separately using the linked rubric, then take the lowest applicable dimension. Justify N/A without hiding missing support. An unresolved applicable `must`, unresolved conflict, or missing required source forces 0. A score never changes a source fact's certainty, proves compliance, or approves publication. Reviewer approval is a separate decision.
 
 No finding is not the same as complete coverage. An unread required source is a blocker, not a pass. A receipt is an agent or integration self-report, not independent attestation that the sources were read or the instructions followed. It must not score writers, record personal language habits, or invent a percentage.
 
-Receipts can expose private repository names, paths, source names, product details, or conflicts. Keep them out of customer-facing copy; before public sharing, redact sensitive details or use synthetic material. Mark redactions rather than fabricating replacement provenance, and keep any permitted full receipt in the authorized review context. Follow [Safety and privacy](SAFETY.md).
+Receipts can expose private repository names, paths, source names, product details, or conflicts. Keep them out of customer-facing copy; before public sharing, redact sensitive details or use synthetic material. Mark reded rather than fabricating replacement provenance, and keep any permitted full receipt in the authorized review context. Follow [Safety and privacy](SAFETY.md).
 
 ## How gaps become better guidance
 

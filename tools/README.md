@@ -71,7 +71,7 @@ Hashes identify bytes; they do not prove approval or trustworthy provenance. The
 
 ## Traceability receipt checker
 
-Drafting and review now include a [traceability and confidence receipt](../docs/traceability.md) by default. Plain text is sufficient. For an integration that needs structured JSON, the optional checker validates the receipt's fields, internal evidence references, and score arithmetic:
+A [traceability and confidence receipt](../docs/traceability.md) is optional for drafting and review. Plain text is sufficient when one is used. For an integration that needs structured JSON, the optional checker validates the receipt's fields, internal evidence references, and score arithmetic:
 
 ```sh
 python3 tools/receipt.py path/to/receipt.json
