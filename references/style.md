@@ -18,7 +18,7 @@ Applies everywhere unless `channels.md` says otherwise. For anything not covered
 
 - Sentence case for everything: titles, headings, buttons, navigation, tabs, column headers, tooltips, messages. Capitalize only the first word, proper nouns, acronyms, and branded names.
 - No ALL CAPS for emphasis. Use bold, sparingly.
-- Headings: informative, one sentence, no period unless the heading has 2 sentences (then a period after each). "Recent history," not "Here is your recent history."
+- Headings: informative, one sentence, no period unless the heading has 2 sentences (then a period after each). "Recent history," not "Here is your recent history." If a heading starts with a number or symbol, don't capitalize the word after it.
 - Acronyms: all letters capitalized. Spell out on first use in body text unless the acronym is better known than the full name.
 - Job titles: capitalize next to a name ("Product Manager Kamal Singh"), lowercase otherwise.
 
@@ -26,11 +26,11 @@ Applies everywhere unless `channels.md` says otherwise. For anything not covered
 
 - **Oxford comma** in sentences with three or more items. No commas at the end of bullets.
 - **Periods:** none on single-sentence UI strings (buttons, labels, headings, toasts). Use them when there are two or more sentences.
-- **Exclamation points:** never in errors or alerts. At most one per screen or piece (see `channels.md`).
+- **Exclamation points:** don't use them in product UI or agent chat. Strong wording does the job on its own. Never use them in errors or alerts. Marketing may allow one per piece (see `channels.md`).
 - **Em dashes (—):** no space before or after, one or two per page at most. Never use double hyphens (--) instead. **En dashes (–)** for ranges, no spaces: "4–5%," "10–11 AM ET."
 - **Ellipsis (…):** the single character, only for truncation, loading ("Loading…"), or hiding sensitive data. Never for trailing off. No space before a truncation ellipsis.
 - **Hyphens:** for compound adjectives, no spaces ("30-day trial," "third-party integrations"). Don't capitalize the word after the hyphen.
-- **Quotes and apostrophes:** curly (“ ” ’), not straight. Commas and periods go inside quotes. Don't use quotes for emphasis. Use quotes for direct quotes, text someone must type, or UI names where bold isn't available.
+- **Quotes and apostrophes:** curly (“ ” ’), not straight. Commas and periods go inside quotes. Don't use quotes for emphasis. Use quotes for direct quotes, text someone must type, or UI names where bold isn't available. For possessives, add ’s, or just ’ if the word is plural and already ends in s.
 - **Colons:** always capitalize the first word after a colon, whether or not what follows is a complete sentence ("One more step: Confirm your email").
 - **Ampersands:** spell out "and" in general. Ampersands are fine where space is tight, like nav bars, tabs, and short labels, and in company names. Never use "+" for "and."
 - **Slashes:** avoid them ("on or off," not "on/off"), except in prices ("$25/month") and rare labels. No space before or after a slash, and don't capitalize the word after it.
@@ -54,7 +54,7 @@ Applies everywhere unless `channels.md` says otherwise. For anything not covered
 - Currency: symbol before the amount, no ".00" on whole amounts ("$25"). For amounts under one unit, use the symbol and a leading zero ("$0.50"), not "cents." In ranges, repeat the symbol on both amounts ("$1.50–$2.50"). Show a currency code after the amount when it's needed ("$25,000 USD"). "K" for thousands is fine where space is tight; keep billing amounts exact. In product UI, write prices as "$25/month." Every price carries the "\*Plus tax" note (see `terminology.md`).
 - Dates: in sentences, use the month's full name ("November"); in tables, metadata, and tight spaces, use three-letter abbreviations ("Nov") and drop the day of the week. Standard product UI format: "Feb 13, 2026." No numeric dates (not "02/13/26") and no ordinals ("December 5," not "December 5th"). Add the year only when it's needed or it isn't the current year. Ranges: "November 5–6," "Nov 5–Dec 11."
 - **Frequencies:** use "daily," "weekly," "monthly," and "yearly." Avoid "every" for frequency ("Billed monthly," not "Billed every month") and avoid "biweekly" (it can mean twice a week or every two weeks). Prefer "Twice a month" over "Biweekly."
-- Time: "10 AM ET." No ":00" on the hour, AM/PM in caps without periods, two-letter time zones (ET, PT — not EST). Put the date first: "March 26 at 4 PM ET." Use ET for times that apply to everyone (like scheduled maintenance) and the person's own time zone for their own actions (publish, payment).
+- Time: "10 AM ET." No ":00" on the hour, AM/PM in caps without periods. Always add a two-letter time zone (ET, PT — not EST). In ranges, only repeat AM or PM if the range crosses from one to the other ("10–11 AM ET," "10 AM–12 PM ET"). Put the date first: "March 26 at 4 PM ET." Use ET for times that apply to everyone (like scheduled maintenance) and the person's own time zone for their own actions (publish, payment).
 - **Relative time:** no space between the number and the unit, and no periods. Start with minutes ("1m"). After 60 minutes → hours ("2h"). After 24 hours → day of the week ("Mon"). After 7 days → weeks ("2w"). After 4 weeks → the date ("Dec 20"). After a year → add the year ("Dec 20, 2025").
 - **Countdowns** (time left before a set moment, like a token refill or trial ending): prefer single-letter units with screen reader support ("2d, 18h, 24m"). If screen reader support isn't possible, use "2 days, 18 hr, 24 min." Don't write every unit in full or use colon form ("2:18:24"). Show days only when more than 24 hours remain, and drop units that reach 0 ("42m, 9s," not "0d, 0h, 42m, 9s").
 - **Phone numbers:** use hyphens only ("555-233-2062"). No parentheses, spaces, periods, or plus signs.
@@ -95,7 +95,7 @@ Clear, consistent labels for usage, billing, and analytics data.
 - Provide captions or transcripts for anything with audio. Any information in a video should also be available another way.
 - Form fields need real labels, not placeholder text. Every icon-only button needs an accessible label.
 - Emoji never carry meaning. Keep them out of product UI. Don't rely on icons or emojis to carry important information.
-- Prefer bold over italics for emphasis; italics are harder to read, especially for people with dyslexia. Don't overuse bold.
+- Prefer bold over italics for emphasis; italics are harder to read, especially for people with dyslexia. Don't overuse bold. Don't bold punctuation unless it's part of a complete bolded sentence.
 - Use gender-neutral language ("they," "people"). Use person-first language ("people with dyslexia"). Avoid stereotypes and unneeded qualifiers. Example names should reflect a range of backgrounds.
 - Write for translation: no idioms or culture-specific jokes, and leave about 35% extra room for longer translated text.
 - Use full country names ("United Kingdom"), not colloquial names ("America" for the United States). "US" without periods is fine where space is tight. Refer to US states by name without adding "state" (or "the state of Washington" when clarity needs it).
@@ -114,3 +114,5 @@ Clear, consistent labels for usage, billing, and analytics data.
 *Revised on 2026-11-11 to match the Notion page "Bolt content standards" (product UI and agent chat), approved by Lillian. This footer records participation, not organizational, legal, accessibility, or localization authority.*
 
 *Revised again on 2026-11-11 to add Notion gaps: frequencies, countdowns, phone numbers, empty values, decimal points, data labels, navigational text details, and accessibility/link/date/currency mechanics. Approved by Lillian via Atlas sync task. This footer records participation, not organizational, legal, accessibility, or localization authority.*
+
+*Revised on 2026-11-16 to match the Notion page "Bolt content standards" (weekly sync check). Pending Lillian's review in the PR. This footer records participation, not organizational, legal, accessibility, or localization authority.*
